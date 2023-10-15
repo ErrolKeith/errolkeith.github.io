@@ -82,7 +82,7 @@ const skills = ref([
 const experience = ref<Experience[]>([
   {
     title: "Software Engineer",
-    company: "Socius Marketing (EverCommerce)",
+    company: "Socius Marketing",
     startEndDate: "Oct 22 - Present",
     detailItems: [
       "Work with an iterative approach to deliver features and bug fixes for a public facing SaaS platform.",
@@ -94,7 +94,7 @@ const experience = ref<Experience[]>([
   },
   {
     title: "WordPress Developer",
-    company: "Socius Marketing (EverCommerce)",
+    company: "Socius Marketing",
     startEndDate: "Aug 21 - Sept 22",
     detailItems: [
       "Created custom integrations for multiple CRM platforms including Salesforce, Hubspot, and NetSuite.",
