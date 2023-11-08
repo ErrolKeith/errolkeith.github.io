@@ -13,7 +13,9 @@ createApp(App).mount("#app");
 
 function validateEnvironment() {
   const validEnvironemnt = environmentSchema.safeParse({
-    web3PublicAccessKey: import.meta.env.VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY,
+    web3PublicAccessKey:
+      import.meta.env.VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY ??
+      import.meta.env.production.VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY,
   });
 
   if (!validEnvironemnt.success) {
