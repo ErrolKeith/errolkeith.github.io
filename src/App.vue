@@ -105,7 +105,7 @@ const skills = ref([
 const experience = ref<Experience[]>([
   {
     title: "Software Engineer",
-    company: "Socius Marketing",
+    company: "Socius Marketing  (EverCommerce)",
     companyDescription: "Socius Marketing is an EverCommerce brand providing marketing technologies as integrated SaaS platforms to small and medium sized businesses in the home renovation and health industries.",
     startEndDate: "Oct 22 - Present",
     detailItems: [
@@ -118,7 +118,7 @@ const experience = ref<Experience[]>([
   },
   {
     title: "WordPress Developer",
-    company: "Socius Marketing",
+    company: "Socius Marketing (EverCommerce)",
     companyDescription: "Socius Marketing is an EverCommerce brand providing marketing technologies as integrated SaaS platforms to small and medium sized businesses in the home renovation and health industries.",
     startEndDate: "Aug 21 - Sept 22",
     detailItems: [
@@ -147,9 +147,9 @@ const experience = ref<Experience[]>([
     startEndDate: "Jan 21 - Apr 21",
     detailItems: [
       "Created clones of Shopify storefronts in separate e-commerce platforms in an effort to provide additional conversion opportunities with domains already receiving traffic.",
-      "Worked in a cross-functional team to rebuild an outdated e-commerce website to be mobile responsive with an updated theme and branding matching the business vision and branding guidelines.",
+      "Worked in a cross-functional team to rebuild an outdated e-commerce website to be mobile responsive with an updated theme and branding to match the business vision and branding guidelines.",
       "Worked in unison with media, marketing, management team members to coordinate the website development, marketing, and roadmap for upcoming events, projects, podcasts, and video content.",
-      "Managed an excess of 100 owned and operated websites with multiple storefronts exceeding 10K products."
+      "Managed more than 100 owned and operated websites with multiple storefronts exceeding 10K products."
     ]
   },
   {
