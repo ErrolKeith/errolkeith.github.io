@@ -3,18 +3,19 @@
     <div class="bg-gray-100 m-2 p-2 md:max-w-[25%] lg:max-w-[20%] rounded-xl shadow-lg">
       <NameAndTitle :name="name" :title="title"/>
       <ContactLinks :email="email" :social-links="socialLinks" />
-      <hr class="border-blue-600 border-2 rounded-lg mb-4 -mx-2" />
+      <hr class="border-blue-500 border-2 rounded-lg mb-4 -mx-2" />
       <Skills :skills="skills" />
       <Certifications :certifications="certs" />
       <Education :schooling="schooling" />
+      <button @click="openContactForm" class="bg-blue-500 font-semibold text-white w-full rounded-md px-4 py-2 mt-8">Contact Errol</button>
     </div>
     <PositionList :experience="experience" />
   </div>
-  <ContactForm class="hidden" />
+  <ContactForm :class="contactFormClass" @close="hideContactForm" ref="contactForm"/>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed, onMounted } from "vue";
 import ContactLinks from "./components/ContactLinks.vue";
 import Education from "./components/Education.vue";
 import Certifications from "./components/Certifications.vue";
@@ -23,9 +24,28 @@ import PositionList from "./components/PositionList.vue";
 import NameAndTitle from "./components/NameAndTitle.vue";
 import ContactForm from "./components/ContactForm.vue";
 
-const name = ref<string>("Errol Keith");
-const title = ref<string>("Software Engineer");
-const email = ref<string>("errol.k.keith@gmail.com");
+const name = "Errol Keith";
+const title = "Software Engineer";
+const email = "errol.k.keith@gmail.com";
+const contactFormIsHidden = ref<boolean>(true);
+
+const contactFormClass = computed(() => {
+  return contactFormIsHidden.value ? "hidden" : "";
+});
+
+onMounted(() => {
+  document.addEventListener('mouseleave', () => {
+    openContactForm();
+  })
+})
+
+function hideContactForm() {
+  contactFormIsHidden.value = true;
+}
+
+function openContactForm(){
+  contactFormIsHidden.value = false;
+}
 
 const socialLinks = ref<SocialLink[]>([
   {

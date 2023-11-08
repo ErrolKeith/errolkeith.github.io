@@ -8,7 +8,7 @@
                     <p class="text-center">{{ position.company }}</p>
                     <p class="text-right">{{ position.startEndDate }}</p>
                 </div>
-                <hr class="border-2 border-blue-600 rounded-lg mb-8"/>
+                <hr class="border-2 border-blue-500 rounded-lg mb-8"/>
                 <ul v-for="experience in position.detailItems" class="m-4 list-disc px-8">
                     <li class="px-2">
                     {{ experience }}

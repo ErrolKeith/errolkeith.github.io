@@ -3,7 +3,7 @@
         <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-200 bg-opacity-40 dark:bg-opacity-80 fixed top-0 right-0 left-0 bottom-0">
         <div class="container mx-auto">
             <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm py-4">
-                <button aria-label="close contact form"><Icon icon="carbon:close-outline" class="text-gray-600 text-3xl"/></button>
+                <button @click.prevent="close" aria-label="close contact form modal"><Icon icon="carbon:close-outline" class="text-gray-600 text-3xl"/></button>
                 
                 <div class="text-center">
                     <h1 class="my-3 text-3xl font-semibold text-gray-900 dark:text-gray-900">
@@ -86,8 +86,11 @@ import { ref } from "vue";
 const web3PublicAccessKey = ref(import.meta.env.VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY);
 const formAction = ref("https://api.web3forms.com/submit");
 
+const emit = defineEmits<{
+    (e: 'close'): void
+}>();
 
-// function validateFormFields(){
-
-// }
+function close(){
+    emit('close');
+}
 </script>
