@@ -7,7 +7,7 @@
       <Skills :skills="skills" />
       <Certifications :certifications="certs" />
       <Education :schooling="schooling" />
-      <button @click="openContactForm" class="bg-blue-500 font-semibold text-white w-full rounded-md px-4 py-2 mt-8">Contact Errol</button>
+      <button @click="openContactForm" class="bg-blue-600 font-semibold text-white w-full rounded-md px-4 py-2 mt-8">Contact Errol</button>
     </div>
     <PositionList :experience="experience" />
   </div>
