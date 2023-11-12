@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="mb-6">
-                        <button type="submit" class="w-full px-3 py-4 text-white bg-blue-500 rounded-md focus:bg-blue-600 focus:outline-none">
+                        <button type="submit" class="w-full px-3 py-4 text-white bg-blue-600 rounded-md focus:bg-blue-600 focus:outline-none">
                         Send Message
                         </button>
                     </div>

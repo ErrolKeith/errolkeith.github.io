@@ -1,6 +1,6 @@
 <template>
     <div class="flex p-2 text-center justify-center md:justify-around mx-auto mb-2">
-        <a :href="`mailto:${email}`" class="mx-2">
+        <a :href="`mailto:${email}`" class="mx-2" aria-label="Email Errol">
             <small>
                 <Icon icon="logos:google-gmail" />
             </small>
