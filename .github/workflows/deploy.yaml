@@ -6,9 +6,6 @@ on:
   push:
     branches: ["main"]
 
-  env:
-    VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY: true
-
   # Allow workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -41,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
-        with:
+        env:
           VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY: ${{ secrets.VITE_WEB3_FORMS_PUBLIC_ACCESS_KEY }}
         run: yarn build
 
